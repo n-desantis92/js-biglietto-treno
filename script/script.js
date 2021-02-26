@@ -3,7 +3,7 @@ var kilometri = prompt("inserisci i kilometri da percorrere");
 //domando l'età
 var eta = prompt("inserisci la tua età");
 //definisco il prezzo al kilometro
-var prezzokm = 0.21;
+var prezzokm = kilometri * 0.21;
 //definisco i sconti
 console.log(kilometri);
 console.log(eta);
@@ -19,4 +19,8 @@ else {
 sconto = 0;
 }
 
-document.getElementById('risultato').innerHTML = kilometri * prezzokm - sconto
+var totsconto = prezzokm * sconto / 100;
+console.log(totsconto);
+var prezzoFinale = prezzokm - totsconto;
+
+document.getElementById('risultato').innerHTML = prezzoFinale +"$"
